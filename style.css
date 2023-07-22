@@ -1,6 +1,6 @@
 :root {
   --bg-color: #FFFFFF;
-  --main-text-color: #202846;
+  --main-text-color: #000000;
 
   /* header */
   --header-bg-color: #000000;
@@ -154,6 +154,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 200px;
 }
 
 .gallery__item-center {
@@ -254,6 +255,7 @@ body {
 .services {
   display: flex;
   height: var(--services-height);
+  margin-bottom: 200px;
 }
 
 .services__items {
@@ -297,47 +299,183 @@ body {
 
 /* #region animation */
 @keyframes moveClockwise {
-  0% { transform: translateX(0) translateY(0); }
-  25% { transform: translateX(100%) translateY(0); }
-  50% { transform: translateX(100%) translateY(100%); }
-  75% { transform: translateX(0%) translateY(100%); }
-  100% { transform: translateX(0) translateY(0); }
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  25% {
+    transform: translateX(100%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(100%) translateY(100%);
+  }
+
+  75% {
+    transform: translateX(0%) translateY(100%);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+  }
 }
+
 @keyframes moveClockwise2 {
-  0% { transform: translateX(0) translateY(0); }
-  25% { transform: translateX(0%) translateY(-100%); }
-  50% { transform: translateX(100%) translateY(-100%); }
-  75% { transform: translateX(100%) translateY(0%); }
-  100% { transform: translateX(0) translateY(0); }
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  25% {
+    transform: translateX(0%) translateY(-100%);
+  }
+
+  50% {
+    transform: translateX(100%) translateY(-100%);
+  }
+
+  75% {
+    transform: translateX(100%) translateY(0%);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+  }
 }
+
 @keyframes moveClockwise3 {
-  0% { transform: translateX(0) translateY(0); }
-  25% { transform: translateX(0%) translateY(100%); }
-  50% { transform: translateX(-100%) translateY(100%); }
-  75% { transform: translateX(-100%) translateY(0); }
-  100% { transform: translateX(0) translateY(0); }
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  25% {
+    transform: translateX(0%) translateY(100%);
+  }
+
+  50% {
+    transform: translateX(-100%) translateY(100%);
+  }
+
+  75% {
+    transform: translateX(-100%) translateY(0);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+  }
 }
+
 @keyframes moveClockwise4 {
-  0% { transform: translateX(0) translateY(0); }
-  25% { transform: translateX(-100%) translateY(0%); }
-  50% { transform: translateX(-100%) translateY(-100%); }
-  75% { transform: translateX(0%) translateY(-100%); }
-  100% { transform: translateX(0) translateY(0); }
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  25% {
+    transform: translateX(-100%) translateY(0%);
+  }
+
+  50% {
+    transform: translateX(-100%) translateY(-100%);
+  }
+
+  75% {
+    transform: translateX(0%) translateY(-100%);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+  }
 }
 
 .anim-HairStyling {
-  animation: moveClockwise 6s infinite;
+  animation: moveClockwise 15s infinite;
 }
 
 .anim-SmoothShave {
-  animation: moveClockwise2 6s infinite;
+  animation: moveClockwise2 15s infinite;
 }
 
 .anim-BeardTrimming {
-  animation: moveClockwise3 6s infinite;
+  animation: moveClockwise3 15s infinite;
 }
 
 .anim-HairStraightening {
-  animation: moveClockwise4 6s infinite;
+  animation: moveClockwise4 15s infinite;
 }
+
 /* #endregion */
+
+/* #region team */
+.team {
+  margin-bottom: 200px;
+}
+
+.team__title {
+  font-family: Rosario;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 177px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.team__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.team__list__member {
+  cursor: pointer;
+  position: relative;
+
+  width: 400px;
+  height: 677px;
+  border-radius: 40px;
+  background-size: contain;
+  transition: filter 0.3s ease;
+  filter: brightness(60%);
+}
+
+.team__list__member_Meredith {
+  background-image: url(images/team/Meredith.png);
+}
+
+.team__list__member_Jason {
+  background-image: url(images/team/Jason.png);
+}
+
+.team__list__member_Ryan {
+  background-image: url(images/team/Ryan.png);
+}
+
+.team__list__member_James {
+  background-image: url(images/team/James.png);
+}
+
+.team__list__member:hover {
+  filter: none;
+  /* Remove the blur effect on the hovered item */
+}
+
+.team__list__member:hover div {
+  display: block;
+}
+
+.team__list__member__name {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 400px;
+  height: 155px;
+  background-color: #A3530AB2;
+  border-radius: 0 0 40px 40px;
+
+  color: #FFFAFA;
+  font-family: Volkhov;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 155px;
+  text-align: center;
+}
+
+/* #endregion */
+
