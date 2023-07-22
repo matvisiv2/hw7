@@ -143,7 +143,7 @@ body {
 
 /* #endregion */
 
-/* #region page */
+/* #region gallery */
 .gallery {
   padding: calc(var(--header-height) * 1.3) 40px 30px 40px;
   display: flex;
@@ -176,4 +176,66 @@ body {
   border-radius: 40px;
 }
 
+/* #endregion */
+
+/* #region animations */
+.anim-1 {
+  animation: 1s linear 0s alternate slidein1;
+}
+
+@keyframes slidein1 {
+  from {
+    /* pushes the sun down past the viewport */
+    transform: translateX(-30vw);
+  }
+  to {
+    /* returns the sun to its default position */
+    transform: translateX(0);
+  }
+}
+
+.anim-2 {
+  animation: 1s linear 0s alternate slidein2;
+}
+
+@keyframes slidein2 {
+  from {
+    /* pushes the sun down past the viewport */
+    transform: translateX(30vw);
+  }
+  to {
+    /* returns the sun to its default position */
+    transform: translateX(0);
+  }
+}
+
+.anim-side-left {
+  animation: 2s linear 0s alternate slidein-side-left;
+}
+
+@keyframes slidein-side-left {
+  from {
+    /* pushes the sun down past the viewport */
+    transform: translateX(-40vw);
+  }
+  to {
+    /* returns the sun to its default position */
+    transform: translateX(0);
+  }
+}
+
+.anim-side-right {
+  animation: 2s linear 0s alternate slidein-side-right;
+}
+
+@keyframes slidein-side-right {
+  from {
+    /* pushes the sun down past the viewport */
+    transform: translateX(40vw);
+  }
+  to {
+    /* returns the sun to its default position */
+    transform: translateX(0);
+  }
+}
 /* #endregion */
