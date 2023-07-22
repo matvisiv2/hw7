@@ -258,13 +258,19 @@ body {
 
 .services__items {
   width: 50vw;
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-items: center;
+  justify-items: center;*/
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.services__items__item {}
+.services__items__item {
+  width: 450px;
+  height: 450px;
+  text-align: center;
+}
 
 .services__items__item img {
   width: 350px;
@@ -280,12 +286,6 @@ body {
   line-height: 58px;
   text-align: center;
 }
-
-.services__img-BeardTrimming {}
-
-.services__img-SmoothShave {}
-
-.services__img-HairStraightening {}
 
 .services__img-1 {
   position: absolute;
@@ -305,16 +305,16 @@ body {
 }
 @keyframes moveClockwise2 {
   0% { transform: translateX(0) translateY(0); }
-  25% { transform: translateX(0%) translateY(100%); }
-  50% { transform: translateX(-100%) translateY(100%); }
-  75% { transform: translateX(-100%) translateY(0); }
+  25% { transform: translateX(0%) translateY(-100%); }
+  50% { transform: translateX(100%) translateY(-100%); }
+  75% { transform: translateX(100%) translateY(0%); }
   100% { transform: translateX(0) translateY(0); }
 }
 @keyframes moveClockwise3 {
   0% { transform: translateX(0) translateY(0); }
-  25% { transform: translateX(0%) translateY(-100%); }
-  50% { transform: translateX(100%) translateY(-100%); }
-  75% { transform: translateX(100%) translateY(0%); }
+  25% { transform: translateX(0%) translateY(100%); }
+  50% { transform: translateX(-100%) translateY(100%); }
+  75% { transform: translateX(-100%) translateY(0); }
   100% { transform: translateX(0) translateY(0); }
 }
 @keyframes moveClockwise4 {
@@ -325,19 +325,19 @@ body {
   100% { transform: translateX(0) translateY(0); }
 }
 
-.services__items__item:nth-child(1) {
+.anim-HairStyling {
   animation: moveClockwise 6s infinite;
 }
 
-.services__items__item:nth-child(2) {
+.anim-SmoothShave {
   animation: moveClockwise2 6s infinite;
 }
 
-.services__items__item:nth-child(3) {
+.anim-BeardTrimming {
   animation: moveClockwise3 6s infinite;
 }
 
-.services__items__item:nth-child(4) {
+.anim-HairStraightening {
   animation: moveClockwise4 6s infinite;
 }
 /* #endregion */
