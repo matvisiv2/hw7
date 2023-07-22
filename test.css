@@ -1,0 +1,90 @@
+.services {
+  display: flex;
+  height: var(--services-height);
+}
+
+.services__items {
+  width: 50vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.services__items__item {}
+
+.services__items__item img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+
+@keyframes moveClockwise {
+  0% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(100%) translateY(0); }
+  50% { transform: translateX(100%) translateY(100%); }
+  75% { transform: translateX(0%) translateY(100%); }
+  100% { transform: translateX(0) translateY(0); }
+}
+@keyframes moveClockwise2 {
+  0% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(0%) translateY(100%); }
+  50% { transform: translateX(-100%) translateY(100%); }
+  75% { transform: translateX(-100%) translateY(0); }
+  100% { transform: translateX(0) translateY(0); }
+}
+@keyframes moveClockwise3 {
+  0% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(0%) translateY(-100%); }
+  50% { transform: translateX(100%) translateY(-100%); }
+  75% { transform: translateX(100%) translateY(0%); }
+  100% { transform: translateX(0) translateY(0); }
+}
+@keyframes moveClockwise4 {
+  0% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(-100%) translateY(0%); }
+  50% { transform: translateX(-100%) translateY(-100%); }
+  75% { transform: translateX(0%) translateY(-100%); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+.services__items__item:nth-child(1) {
+  animation: moveClockwise 6s infinite;
+}
+
+.services__items__item:nth-child(2) {
+  animation: moveClockwise2 6s infinite;
+}
+
+.services__items__item:nth-child(3) {
+  animation: moveClockwise3 6s infinite;
+}
+
+.services__items__item:nth-child(4) {
+  animation: moveClockwise4 6s infinite;
+}
+
+/* #region old animation*/
+.services__img-HairStyling {
+  /* offset-path: path("M20,20 C20,100 200,0 200,100"); */
+  offset-path: path("M180,200 650,200 650,750 180,750 180,200");
+  animation: move 10s infinite ease-in-out;
+  offset-rotate: 0deg;
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  25% {
+    offset-distance: 25%;
+  }
+  50% {
+    offset-distance: 50%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+/* #endregion */

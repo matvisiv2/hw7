@@ -7,6 +7,9 @@
   --menu-text-color: #FFFFFF;
   --menu-text-secondary-color: #DCDCDC;
   --header-height: 130px;
+
+  /* services */
+  --services-height: 1080px;
 }
 
 @media(max-width: 768px) {
@@ -30,7 +33,8 @@ a {
 
 ul,
 ol,
-li {
+li,
+p {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -109,6 +113,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 
 .header__logo {
@@ -188,6 +193,7 @@ body {
     /* pushes the sun down past the viewport */
     transform: translateX(-30vw);
   }
+
   to {
     /* returns the sun to its default position */
     transform: translateX(0);
@@ -203,6 +209,7 @@ body {
     /* pushes the sun down past the viewport */
     transform: translateX(30vw);
   }
+
   to {
     /* returns the sun to its default position */
     transform: translateX(0);
@@ -218,6 +225,7 @@ body {
     /* pushes the sun down past the viewport */
     transform: translateX(-40vw);
   }
+
   to {
     /* returns the sun to its default position */
     transform: translateX(0);
@@ -233,9 +241,103 @@ body {
     /* pushes the sun down past the viewport */
     transform: translateX(40vw);
   }
+
   to {
     /* returns the sun to its default position */
     transform: translateX(0);
   }
+}
+
+/* #endregion */
+
+/* #region services */
+.services {
+  display: flex;
+  height: var(--services-height);
+}
+
+.services__items {
+  width: 50vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.services__items__item {}
+
+.services__items__item img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+.services__items__item p {
+  font-family: Rosario;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 58px;
+  text-align: center;
+}
+
+.services__img-BeardTrimming {}
+
+.services__img-SmoothShave {}
+
+.services__img-HairStraightening {}
+
+.services__img-1 {
+  position: absolute;
+  right: 0;
+  height: var(--services-height);
+}
+
+/* #endregion */
+
+/* #region animation */
+@keyframes moveClockwise {
+  0% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(100%) translateY(0); }
+  50% { transform: translateX(100%) translateY(100%); }
+  75% { transform: translateX(0%) translateY(100%); }
+  100% { transform: translateX(0) translateY(0); }
+}
+@keyframes moveClockwise2 {
+  0% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(0%) translateY(100%); }
+  50% { transform: translateX(-100%) translateY(100%); }
+  75% { transform: translateX(-100%) translateY(0); }
+  100% { transform: translateX(0) translateY(0); }
+}
+@keyframes moveClockwise3 {
+  0% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(0%) translateY(-100%); }
+  50% { transform: translateX(100%) translateY(-100%); }
+  75% { transform: translateX(100%) translateY(0%); }
+  100% { transform: translateX(0) translateY(0); }
+}
+@keyframes moveClockwise4 {
+  0% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(-100%) translateY(0%); }
+  50% { transform: translateX(-100%) translateY(-100%); }
+  75% { transform: translateX(0%) translateY(-100%); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+.services__items__item:nth-child(1) {
+  animation: moveClockwise 6s infinite;
+}
+
+.services__items__item:nth-child(2) {
+  animation: moveClockwise2 6s infinite;
+}
+
+.services__items__item:nth-child(3) {
+  animation: moveClockwise3 6s infinite;
+}
+
+.services__items__item:nth-child(4) {
+  animation: moveClockwise4 6s infinite;
 }
 /* #endregion */
