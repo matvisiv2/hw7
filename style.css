@@ -479,3 +479,130 @@ body {
 
 /* #endregion */
 
+/* #region contact*/
+.contact {}
+
+.contact__container {
+  padding: 100px 162px;
+}
+
+.contact__header {
+  display: flex;
+  column-gap: 35px;
+  margin-bottom: 95px;
+}
+
+.contact__header__left {
+  width: 940px;
+}
+
+.contact__title {
+  font-family: Rosario;
+  font-size: 64px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 78px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-right: 130px;
+}
+
+.contact__form {
+  background-color: #E5E5E5;
+  padding: 25px 40px 25px 35px;
+}
+
+.contact__form__props {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 42px;
+}
+
+.contact__form__props__name,
+.contact__form__props__email {
+  width: 390px;
+  height: 80px;
+}
+
+.contact__form__message {
+  width: 850px;
+  height: 209px;
+  padding-top: 20px;
+}
+
+.contact__form__props__name,
+.contact__form__props__email,
+.contact__form__message {
+  border: none;
+  padding-left: 20px;
+  font-family: Rosario;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #00000080;
+}
+
+.contact__map {
+  width: 626px;
+  height: 608px;
+}
+
+.contact__footer {
+  display: flex;
+  justify-content: space-around;
+  column-gap: 80px;
+
+  font-family: Rosario;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.contact__footer a {
+  color: var(--main-text-color);
+}
+
+.contact__footer__subtitles {
+  font-family: Rosario;
+  font-style: normal;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.contact__footer_contacts {}
+
+.contact__footer__opening {}
+
+.contact__footer__opening__title {
+  font-family: Rosario;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact__footer_social {}
+
+.contact__footer_social__links__container {
+  text-align: left;
+  width: fit-content;
+  margin: auto;
+}
+
+.contact__footer_social__links {
+  margin: 10px auto;
+  line-height: 26px;
+}
+
+/* #endregion */
