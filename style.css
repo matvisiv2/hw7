@@ -99,6 +99,7 @@ body {
   color: var(--main-text-color);
   margin: 0;
   position: relative;
+  overflow-x: hidden;
 }
 
 /* #endregion */
@@ -260,9 +261,6 @@ body {
 
 .services__items {
   width: 50vw;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;*/
   display: flex;
   justify-content: center;
   align-items: center;
