@@ -419,6 +419,7 @@ body {
   right: 0;
   width: 50vw;
   height: var(--services-height);
+  text-align: end;
 }
 
 /* #endregion */
